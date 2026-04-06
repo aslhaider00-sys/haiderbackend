@@ -1,0 +1,17 @@
+{% extends "layouts.html" %}  
+{% comment %} extending our layout html {% endcomment %}
+{% block title%}
+    New Post
+{%endblock %}
+
+{% block content%} 
+    <section>
+            <h1>New Post</h1>
+            <form class=" "action="{% url 'posts:new-post' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <button>Add Post</button>
+            </form>
+    </section>
+{%endblock %}
+242

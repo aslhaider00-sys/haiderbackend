@@ -1,0 +1,10 @@
+Data/
+Dataa/
+*.mp4
+*.avi
+*.jpg
+*.png
+media/
+venv/
+__pycache__/
+db.sqlite3

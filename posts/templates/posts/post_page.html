@@ -1,0 +1,21 @@
+{% extends "layouts.html" %}  
+{% comment %} extending our layout html {% endcomment %}
+{% block title%}
+    {{post.title}}
+{%endblock %}
+
+{% block content%}
+    <section>
+        <img 
+            class="banner"
+            src="{{ post.banner.url}}"
+            alt="{{post.title}}">
+        <video width="400" controls>
+            <source src="{{post.demonstration.url }}">
+        </video>
+        <h1>{{post.title}}</h1>
+        <p>{{post.body}}</p>
+        <p>{{post.date}}</p>
+        <p>{{post.category}}</p>
+    </section>
+{%endblock %}

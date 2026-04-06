@@ -1,0 +1,25 @@
+{% extends "layouts.html" %}  
+{% comment %} extending our layout html {% endcomment %}
+{% block title%}
+  Posts
+{%endblock %}
+
+{% block content%}
+<section>
+    <h1>Post</h1>
+
+    {% for post in posts %}
+      <article class="post">
+        <h2>{%comment%}  #url page is inside the post app {% endcomment%}
+          <a href="{% url 'posts:page' slug=post.slug%}">
+            {{post.title}}
+          </a>
+        </h2>
+        <p>{{post.body}}</p>
+        <p>{{post.date}}</p>
+        <p>{{post.category}}</p>
+        <p>{{post.difficulty}}</p>
+      </article>
+    {% endfor %}
+</section>
+{%endblock %}
